@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Mengatur karakter agar teks tampil dengan benar -->
+    <meta charset="UTF-8">
+
+    <!-- Membuat tampilan menyesuaikan layar HP dan komputer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Deskripsi singkat website -->
+    <meta name="description" content="Portfolio pribadi untuk menampilkan profil, keahlian, dan proyek web.">
+
+    <!-- Judul yang tampil di tab browser -->
+    <title>Personal Portfolio | Nama Kamu</title>
+
+    <!-- Menghubungkan Bootstrap melalui CDN -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Menghubungkan CSS buatan sendiri -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Bagian kepala website -->
+    <header>
+        
+<!-- Navigasi utama website -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <!-- Nama atau identitas website -->
+        <a class="navbar-brand fw-bold" href="#beranda">
+            Suta Wijaya
+        </a>
+
+        <!-- Tombol menu untuk layar kecil -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPortfolio"
+            aria-controls="menuPortfolio"
+            aria-expanded="false"
+            aria-label="Buka navigasi"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Daftar menu navigasi -->
+        <div class="collapse navbar-collapse" id="menuPortfolio">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#beranda">Beranda</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#tentang">Tentang</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#keahlian">Keahlian</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#proyek">Proyek</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+
+            </ul>
+        </div>
+            
+        <button id="darkModeToggle"
+            class="btn btn-outline-light btn-sm ms-lg-3 mt-2 mt-lg-0"
+            type="button">
+            🌙 Dark Mode
+        </button>
+
+    </div>
+</nav>
+
+    </header>
+
+    <!-- Konten utama website -->
+    <main>
+        
+<!-- Hero section: bagian perkenalan utama -->
+<section class="hero-section" id="beranda">
+    <div class="container py-5">
+        <div class="row align-items-center g-4">
+
+            <!-- Bagian kiri: teks perkenalan -->
+            <div class="col-lg-7">
+                <p class="text-primary fw-semibold mb-2">
+                    HALO, SELAMAT DATANG!
+                </p>
+                
+                <div class="profession-badge">
+                    <span class="status-dot"></span>
+                    Mahasiswa Sistem Informasi
+                </div>
+
+                <h1>Saya <span class="name-highlight">Suta Wijaya</span></h1>
+
+                <p class="lead mt-3">
+                    Saya sedang belajar pengembangan web dan
+                    membangun proyek digital sebagai bagian
+                    dari perjalanan belajar saya.
+                </p>
+
+                <a href="#proyek" class="btn btn-primary btn-lg mt-3">
+                    Lihat Proyek Saya
+                </a>
+
+                <a href="#tentang"
+                   class="btn btn-outline-dark btn-lg mt-3 ms-2">
+                    Tentang Saya
+                </a>
+            </div>
+
+            <!-- Bagian kanan: lingkaran profil -->
+            <div class="col-lg-5 text-center">
+                <div class="profile-placeholder mx-auto">
+                    <span>SW</span>
+                </div>
+
+                <p class="text-secondary mt-3">
+                    Suta Wijaya | Web Development
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+    
+<!-- Section Tentang Saya -->
+<section id="tentang" class="py-5 about-section">
+    <div class="container">
+
+        <!-- Judul section -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Tentang Saya</h2>
+            <p class="text-secondary">
+                Mengenal lebih dekat profil, minat, dan tujuan saya
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Kolom pertama: profil diri -->
+            <div class="col-md-6">
+                <h3 class="h5 fw-bold">Siapa Saya?</h3>
+
+                <p>
+                    Halo, perkenalkan nama saya Suta Wijaya.
+                    Saya merupakan mahasiswa Program Studi Sistem Informasi
+                    yang memiliki ketertarikan terhadap perkembangan
+                    teknologi informasi, khususnya dalam bidang
+                    pengembangan website. Saya senang mempelajari bagaimana
+                    sebuah website dirancang, dibangun, dan dikembangkan
+                    agar dapat memberikan informasi serta pengalaman yang
+                    baik bagi penggunanya.
+                </p>
+
+                <p>
+                    Dalam proses belajar, saya mulai mengenal berbagai
+                    teknologi dasar pengembangan web, seperti HTML untuk
+                    menyusun struktur halaman, CSS untuk mengatur tampilan,
+                    serta Bootstrap untuk membantu menciptakan desain yang
+                    responsif. Saya juga mempelajari JavaScript agar website
+                    dapat memiliki fungsi interaktif dan tidak hanya
+                    menampilkan informasi secara statis.
+                </p>
+            </div>
+
+            <!-- Kolom kedua: tujuan dan pengembangan diri -->
+            <div class="col-md-6">
+                <h3 class="h5 fw-bold">Tujuan dan Pengembangan Diri</h3>
+
+                <p>
+                    Saya menyadari bahwa kemampuan dalam bidang teknologi
+                    perlu terus dikembangkan melalui latihan, pengalaman,
+                    dan kemauan untuk mempelajari hal-hal baru. Oleh karena
+                    itu, saya berusaha memahami setiap materi yang dipelajari
+                    serta menerapkannya dalam bentuk latihan dan proyek
+                    sederhana. Bagi saya, proses mencoba, menemukan kesalahan,
+                    dan memperbaiki kode merupakan bagian penting dalam
+                    meningkatkan kemampuan pemrograman.
+                </p>
+
+                <p>
+                    Ke depannya, saya ingin memperdalam pengetahuan dalam
+                    pengembangan website, meningkatkan kemampuan berpikir
+                    logis, serta membangun proyek digital yang bermanfaat.
+                    Saya juga ingin mengembangkan kemampuan bekerja secara
+                    terstruktur, menyelesaikan masalah, dan menggunakan
+                    teknologi secara kreatif. Melalui portfolio ini, saya
+                    berharap dapat mendokumentasikan proses belajar,
+                    menampilkan hasil karya, dan menunjukkan perkembangan
+                    kemampuan saya di bidang Sistem Informasi.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+    
+<!-- Section Keahlian -->
+<section id="keahlian" class="py-5 skills-section">
+    <div class="container">
+
+        <!-- Judul section -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Keahlian Saya</h2>
+            <p class="text-secondary">
+                Teknologi yang sedang saya pelajari dan kembangkan
+            </p>
+        </div>
+
+        <!-- Baris kartu keahlian -->
+        <div class="row g-4">
+
+            <!-- Kartu HTML -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <article class="card skill-card h-100">
+                    <div class="card-body p-4">
+                        <div class="skill-icon html-icon">HTML</div>
+
+                        <h3 class="h5 fw-bold mt-3">HTML</h3>
+
+                        <p class="text-secondary">
+                            Mempelajari struktur halaman website,
+                            penggunaan elemen semantik, serta cara
+                            menyusun konten dengan HTML5.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Kartu CSS -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <article class="card skill-card h-100">
+                    <div class="card-body p-4">
+                        <div class="skill-icon css-icon">CSS</div>
+
+                        <h3 class="h5 fw-bold mt-3">CSS</h3>
+
+                        <p class="text-secondary">
+                            Mempelajari pengaturan warna, tipografi,
+                            jarak, tata letak, dan desain website
+                            yang nyaman dilihat.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Kartu Bootstrap -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <article class="card skill-card h-100">
+                    <div class="card-body p-4">
+                        <div class="skill-icon bootstrap-icon">BS</div>
+
+                        <h3 class="h5 fw-bold mt-3">Bootstrap</h3>
+
+                        <p class="text-secondary">
+                            Mengenal komponen siap pakai, sistem
+                            grid, navbar, tombol, dan kelas responsif
+                            untuk membangun antarmuka.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Kartu JavaScript -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <article class="card skill-card h-100">
+                    <div class="card-body p-4">
+                        <div class="skill-icon js-icon">JS</div>
+
+                        <h3 class="h5 fw-bold mt-3">JavaScript</h3>
+
+                        <p class="text-secondary">
+                            Mempelajari variabel, fungsi, event,
+                            serta manipulasi DOM untuk membuat
+                            website lebih interaktif.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
+    
+<!-- Section Proyek -->
+<section id="proyek" class="py-5 project-section">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Proyek Saya</h2>
+            <p class="text-secondary">
+                Beberapa proyek latihan dalam perjalanan belajar saya
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Proyek pertama -->
+            <div class="col-md-6 col-lg-4">
+                <article class="card project-card h-100">
+                    <div class="card-body p-4">
+                        <span class="badge text-bg-primary">
+                            HTML & CSS
+                        </span>
+
+                        <h3 class="h5 fw-bold mt-3">
+                            Personal Portfolio
+                        </h3>
+
+                        <p class="text-secondary">
+                            Website portfolio pribadi untuk menampilkan
+                            profil, keahlian, dan hasil pembelajaran
+                            dalam pengembangan web.
+                        </p>
+
+                        <a href="#beranda"
+                           class="btn btn-outline-primary">
+                            Lihat Portfolio
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Proyek kedua -->
+            <div class="col-md-6 col-lg-4">
+                <article class="card project-card h-100">
+                    <div class="card-body p-4">
+                        <span class="badge text-bg-success">
+                            Bootstrap
+                        </span>
+
+                        <h3 class="h5 fw-bold mt-3">
+                            Responsive Landing Page
+                        </h3>
+
+                        <p class="text-secondary">
+                            Latihan membuat halaman web dengan
+                            komponen Bootstrap dan tata letak
+                            yang menyesuaikan ukuran layar.
+                        </p>
+
+                        <a href="#keahlian"
+                           class="btn btn-outline-primary">
+                            Lihat Teknologi
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Proyek ketiga -->
+            <div class="col-md-6 col-lg-4">
+                <article class="card project-card h-100">
+                    <div class="card-body p-4">
+                        <span class="badge text-bg-warning">
+                            JavaScript
+                        </span>
+
+                        <h3 class="h5 fw-bold mt-3">
+                            Kalkulator Biaya Proyek
+                        </h3>
+
+                        <p class="text-secondary">
+                            Aplikasi untuk memperkirakan biaya
+                            pembuatan website berdasarkan jumlah
+                            halaman dan biaya per halaman.
+                        </p>
+
+                        <a href="#kalkulator"
+                           class="btn btn-outline-primary">
+                            Coba Kalkulator
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
+    
+<!-- Section Kalkulator Estimasi Biaya -->
+<section id="kalkulator" class="py-5 calculator-section">
+    <div class="container">
+
+        <!-- Judul kalkulator -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Kalkulator Estimasi Biaya Proyek</h2>
+            <p class="text-secondary">
+                Hitung estimasi biaya pembuatan website sederhana
+            </p>
+        </div>
+
+        <!-- Membuat kalkulator berada di tengah -->
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-xl-6">
+
+                <div class="card calculator-card">
+                    <div class="card-body p-4 p-md-5">
+
+                        <!-- Form untuk memasukkan data -->
+                        <form id="calculatorForm">
+
+                            <!-- Input jumlah halaman -->
+                            <div class="mb-4">
+                                <label for="jumlahHalaman"
+                                    class="form-label fw-semibold">
+                                    Jumlah Halaman Website
+                                </label>
+
+                                <input type="number"
+                                    class="form-control form-control-lg"
+                                    id="jumlahHalaman"
+                                    min="1"
+                                    step="1"
+                                    placeholder="Contoh: 5"
+                                    required>
+                            </div>
+
+                            <!-- Input biaya per halaman -->
+                            <div class="mb-4">
+                                <label for="biayaHalaman"
+                                    class="form-label fw-semibold">
+                                    Biaya per Halaman (Rp)
+                                </label>
+
+                                <input type="number"
+                                    class="form-control form-control-lg"
+                                    id="biayaHalaman"
+                                    min="0"
+                                    step="1000"
+                                    placeholder="Contoh: 150000"
+                                    required>
+                            </div>
+
+                            <!-- Tombol menghitung -->
+                            <button type="submit"
+                                class="btn btn-primary btn-lg w-100">
+                                Hitung Estimasi Biaya
+                            </button>
+
+                        </form>
+
+                        <!-- Tempat menampilkan hasil -->
+                        <div id="hasilKalkulator"
+                            class="mt-4"
+                            aria-live="polite">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+    
+<!-- ===== BAGIAN KONTAK ===== -->
+<section id="kontak" class="py-5 contact-section">
+    <div class="container">
+
+        <!-- Judul bagian -->
+        <div class="text-center mb-5">
+            <h2>Hubungi Saya</h2>
+            <p class="contact-subtitle">
+                Punya pertanyaan atau ingin berdiskusi?
+                Silakan hubungi saya melalui informasi di bawah ini.
+            </p>
+        </div>
+
+        <!-- Kartu kontak -->
+        <div class="row justify-content-center g-4">
+
+          
+            <!-- Kartu Email -->
+            <div class="col-md-5 col-lg-4">
+                <div class="contact-card h-100 text-center p-4">
+                    <div class="contact-icon">✉</div>
+                    <h3>Email</h3>
+                    <p>
+                        Hubungi saya melalui email untuk pertanyaan
+                        atau kerja sama.
+                    </p>
+                    
+                    <p class="contact-email">
+                        sutawijaya765@gmail.com
+                    </p>
+
+                    <a href="mailto:sutawijaya765@gmail.com"
+                    class="btn btn-primary">
+                        Kirim Email
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kartu Diskusi -->
+            <div class="col-md-5 col-lg-4">
+                <div class="contact-card h-100 text-center p-4">
+                    <div class="contact-icon">💬</div>
+                    <h3>Diskusi</h3>
+                    <p>
+                        Terbuka untuk berdiskusi tentang teknologi
+                        dan pengembangan website.
+                    </p>
+                    <a href="mailto:sutawijaya765@gmail.com?subject=Diskusi%20Portfolio"
+                    class="btn btn-outline-primary">
+                        Ayo Berdiskusi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Bagian bawah website -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2026 Personal Portfolio</p>
+    </footer>
+
+    <!-- JavaScript Bootstrap untuk fitur komponen interaktif -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- JavaScript buatan sendiri -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

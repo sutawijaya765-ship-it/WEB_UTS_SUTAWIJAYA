@@ -1,0 +1,873 @@
+
+/* Warna dasar portfolio */
+:root {
+    --warna-utama: #2563eb;
+    --warna-utama-hover: #1d4ed8;
+    --warna-gelap: #0f172a;
+    --warna-teks: #1e293b;
+    --warna-latar: #f4f7fc;
+    --warna-kartu: #ffffff;
+    --warna-border: #e2e8f0;
+}
+
+/* Tampilan dasar halaman */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--warna-latar);
+    color: var(--warna-teks);
+    line-height: 1.7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Judul lebih tegas */
+h1, h2, h3, h4 {
+    letter-spacing: -0.5px;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+
+/* Mengatur ukuran judul utama */
+h1 {
+    font-weight: bold;
+}
+
+
+/* Memberikan latar yang lembut pada hero section */
+.hero-section {
+    background-color: #f5f7fa;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Membuat tempat foto profil sementara */
+.profile-placeholder {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0d6efd, #6ea8fe);
+    color: white;
+
+    /* Membuat huruf SW berada di tengah lingkaran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 64px;
+    font-weight: bold;
+}
+
+/* Menyesuaikan ukuran placeholder pada HP */
+@media (max-width: 576px) {
+    .profile-placeholder {
+        width: 190px;
+        height: 190px;
+        font-size: 48px;
+    }
+}
+
+
+/* Latar belakang bagian keahlian */
+.skills-section {
+    background-color: #f5f7fa;
+}
+
+/* Tampilan dasar setiap kartu */
+.skill-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Efek ketika kursor diarahkan ke kartu */
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Kotak singkatan teknologi */
+.skill-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Warna masing-masing teknologi */
+.html-icon {
+    background-color: #fff0e6;
+    color: #e87532;
+}
+
+.css-icon {
+    background-color: #e6f0ff;
+    color: #2877d4;
+}
+
+.bootstrap-icon {
+    background-color: #f0e9ff;
+    color: #7952b3;
+}
+
+.js-icon {
+    background-color: #fff8d9;
+    color: #9b7a00;
+}
+
+
+/* Tampilan kartu proyek */
+.project-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Efek hover pada kartu proyek */
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Jarak nyaman untuk isi kartu */
+.project-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Mendorong tombol ke bagian bawah kartu */
+.project-card .btn {
+    margin-top: auto;
+}
+
+
+/* Section kalkulator */
+.calculator-section {
+    background-color: #f5f7fa;
+}
+
+/* Kotak utama kalkulator */
+.calculator-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Kolom input */
+.calculator-card .form-control {
+    border-radius: 10px;
+}
+
+/* Tombol hitung */
+.calculator-card button {
+    border-radius: 10px;
+}
+
+
+
+/* ===== DARK MODE ===== */
+
+body.dark-mode {
+    background-color: #121826;
+    color: #e5e7eb;
+}
+
+/* Semua section utama */
+body.dark-mode main,
+body.dark-mode main section,
+body.dark-mode .hero-section,
+body.dark-mode .skills-section,
+body.dark-mode .calculator-section {
+    background-color: #121826;
+    color: #e5e7eb;
+}
+
+/* Judul */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #f9fafb;
+}
+
+/* Paragraf dan teks sekunder */
+body.dark-mode p,
+body.dark-mode .text-secondary {
+    color: #cbd5e1 !important;
+}
+
+/* Kartu */
+body.dark-mode .skill-card,
+body.dark-mode .project-card,
+body.dark-mode .calculator-card {
+    background-color: #1f2937;
+    border-color: #374151;
+    color: #e5e7eb;
+}
+
+/* Teks di dalam kartu */
+body.dark-mode .card-body,
+body.dark-mode .card-body p,
+body.dark-mode .card-body h3,
+body.dark-mode .card-body h4 {
+    color: #e5e7eb;
+}
+
+/* Input kalkulator */
+body.dark-mode .form-control {
+    background-color: #111827;
+    color: #f9fafb;
+    border-color: #4b5563;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #9ca3af;
+}
+
+/* Tombol outline */
+body.dark-mode .btn-outline-dark {
+    color: #f9fafb;
+    border-color: #f9fafb;
+}
+
+/* Footer */
+body.dark-mode footer {
+    background-color: #1f2937;
+    color: #e5e7eb;
+}
+
+body.dark-mode footer p {
+    color: #e5e7eb !important;
+}
+
+
+/* Latar section Tentang Saya */
+.about-section {
+    background-color: #ffffff;
+}
+
+/* Latar section Tentang Saya saat Dark Mode */
+body.dark-mode .about-section {
+    background-color: #121826;
+}
+
+
+/* ===== HERO SECTION PROFESIONAL ===== */
+.hero-section {
+    background: linear-gradient(135deg, #eff6ff 0%, #ffffff 65%);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* Judul utama */
+.hero-section h1 {
+    color: #0f172a;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* Paragraf hero */
+.hero-section p {
+    color: #475569;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Tombol utama */
+.hero-section .btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Efek saat tombol disorot */
+.hero-section .btn-primary:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+/* Tampilan hero saat Dark Mode aktif */
+body.dark-mode .hero-section {
+    background: linear-gradient(135deg, #111827 0%, #121826 70%);
+}
+
+body.dark-mode .hero-section h1 {
+    color: #f8fafc;
+}
+
+body.dark-mode .hero-section p {
+    color: #cbd5e1;
+}
+
+
+/* ===== NAVBAR PROFESIONAL ===== */
+.navbar {
+    background-color: #ffffff;
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+/* Nama atau logo portfolio */
+.navbar .navbar-brand {
+    color: #2563eb;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* Menu navigasi */
+.navbar .nav-link {
+    color: #475569;
+    font-weight: 600;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+/* Efek ketika menu disorot */
+.navbar .nav-link:hover {
+    color: #2563eb;
+}
+
+/* Tombol hamburger pada layar kecil */
+.navbar .navbar-toggler {
+    border-color: #cbd5e1;
+}
+
+/* Navbar saat Dark Mode aktif */
+body.dark-mode .navbar {
+    background-color: #1f2937;
+    border-bottom-color: #374151;
+}
+
+body.dark-mode .navbar .navbar-brand {
+    color: #60a5fa;
+}
+
+body.dark-mode .navbar .nav-link {
+    color: #cbd5e1;
+}
+
+body.dark-mode .navbar .nav-link:hover {
+    color: #60a5fa;
+}
+
+body.dark-mode .navbar .navbar-toggler {
+    border-color: #64748b;
+}
+
+body.dark-mode .navbar .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* ===== KARTU KEAHLIAN DAN PROYEK ===== */
+
+/* Tampilan dasar kartu */
+.skill-card,
+.project-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek saat kartu disorot */
+.skill-card:hover,
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.12);
+}
+
+/* Isi kartu */
+.skill-card .card-body,
+.project-card .card-body {
+    padding: 24px;
+}
+
+/* Judul kartu */
+.skill-card h3,
+.skill-card h4,
+.project-card h3,
+.project-card h4 {
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Jarak antar kartu */
+.skills-section .row,
+.project-section .row {
+    row-gap: 24px;
+}
+
+/* Kartu saat Dark Mode aktif */
+body.dark-mode .skill-card,
+body.dark-mode .project-card {
+    background-color: #1f2937;
+    border-color: #374151;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+body.dark-mode .skill-card:hover,
+body.dark-mode .project-card:hover {
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ===== JUDUL SETIAP BAGIAN ===== */
+main section h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+}
+
+main section h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    border-radius: 10px;
+    margin: 14px auto 0;
+}
+
+/* ===== TOMBOL LEBIH MODERN ===== */
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+/* ===== KALKULATOR LEBIH ELEGAN ===== */
+.calculator-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 12px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+}
+
+.calculator-card .form-control {
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.calculator-card .form-control:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* ===== DARK MODE ===== */
+body.dark-mode main section h2::after {
+    background: linear-gradient(90deg, #60a5fa, #93c5fd);
+}
+
+body.dark-mode .calculator-card {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-mode .calculator-card .form-control:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.15);
+}
+
+
+/* ===== VISUAL PROFIL HERO ===== */
+
+/* Lingkaran inisial SW */
+.hero-section .profile-circle {
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -3px;
+    border: 8px solid rgba(255, 255, 255, 0.8);
+    box-shadow:
+        0 0 0 12px rgba(37, 99, 235, 0.08),
+        0 20px 45px rgba(37, 99, 235, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek ketika lingkaran disorot */
+.hero-section .profile-circle:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow:
+        0 0 0 15px rgba(37, 99, 235, 0.1),
+        0 25px 50px rgba(37, 99, 235, 0.3);
+}
+
+/* Responsif untuk layar HP */
+@media (max-width: 576px) {
+    .hero-section .profile-circle {
+        width: 170px;
+        height: 170px;
+        font-size: 3rem;
+    }
+
+    .hero-section {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+}
+
+/* Penyesuaian lingkaran pada Dark Mode */
+body.dark-mode .hero-section .profile-circle {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+
+/* ===== BADGE PROFESI ===== */
+.hero-section .profession-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    margin-bottom: 18px;
+    border: 1px solid #bfdbfe;
+    border-radius: 50px;
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Titik biru kecil pada badge */
+.hero-section .profession-badge .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #2563eb;
+}
+
+/* Aksen nama */
+.hero-section .name-highlight {
+    color: #2563eb;
+}
+
+/* Badge pada Dark Mode */
+body.dark-mode .hero-section .profession-badge {
+    background-color: #1e3a5f;
+    border-color: #334155;
+    color: #bfdbfe;
+}
+
+body.dark-mode .hero-section .profession-badge .status-dot {
+    background-color: #60a5fa;
+}
+
+body.dark-mode .hero-section .name-highlight {
+    color: #60a5fa;
+}
+
+
+/* ===== FOOTER PROFESIONAL ===== */
+footer {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f8fafc;
+    padding: 32px 0;
+    border-top: 3px solid #2563eb;
+}
+
+footer p {
+    color: #cbd5e1;
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+footer a {
+    color: #93c5fd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* ===== JARAK ANTAR BAGIAN ===== */
+main section {
+    scroll-margin-top: 80px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    main section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .skill-card .card-body,
+    .project-card .card-body {
+        padding: 20px;
+    }
+}
+
+/* ===== FOOTER DARK MODE ===== */
+body.dark-mode footer {
+    background: linear-gradient(135deg, #020617, #111827);
+    border-top-color: #60a5fa;
+}
+
+
+/* ===== DARK MODE REFINEMENT ===== */
+
+/* Latar belakang utama */
+body.dark-mode {
+    background-color: #0b1120;
+    color: #e2e8f0;
+}
+
+/* Setiap section memiliki sedikit variasi warna */
+body.dark-mode .about-section,
+body.dark-mode .project-section {
+    background-color: #0f172a !important;
+    color: #e2e8f0;
+}
+
+body.dark-mode .skills-section,
+body.dark-mode .calculator-section {
+    background-color: #111c30 !important;
+    color: #e2e8f0;
+}
+
+/* Kartu sedikit lebih terang daripada latar */
+body.dark-mode .skill-card,
+body.dark-mode .project-card,
+body.dark-mode .calculator-card {
+    background-color: #182438;
+    border: 1px solid #2b3a52;
+    color: #e2e8f0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Judul dan teks */
+body.dark-mode main section h2,
+body.dark-mode .skill-card h3,
+body.dark-mode .skill-card h4,
+body.dark-mode .project-card h3,
+body.dark-mode .project-card h4 {
+    color: #f1f5f9;
+}
+
+body.dark-mode main section p,
+body.dark-mode .card-body p {
+    color: #bdc9da;
+}
+
+/* Input kalkulator */
+body.dark-mode .form-control {
+    background-color: #0f172a;
+    color: #f1f5f9;
+    border-color: #35445d;
+}
+
+body.dark-mode .form-control:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.12);
+}
+
+/* Hover kartu */
+body.dark-mode .skill-card:hover,
+body.dark-mode .project-card:hover {
+    border-color: #45638d;
+    transform: translateY(-7px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+/* Judul tetap memiliki aksen biru */
+body.dark-mode main section h2::after {
+    background: linear-gradient(90deg, #60a5fa, #a78bfa);
+}
+
+
+/* ===== GRADASI LEMBUT DARK MODE ===== */
+
+/* Hero: gradasi terang yang halus di atas latar navy */
+body.dark-mode .hero-section {
+    background:
+        radial-gradient(
+            ellipse at 75% 20%,
+            rgba(226, 232, 240, 0.10) 0%,
+            rgba(148, 163, 184, 0.04) 35%,
+            transparent 70%
+        ),
+        linear-gradient(135deg, #111c30 0%, #0b1120 75%);
+}
+
+/* Section Tentang dan Proyek */
+body.dark-mode .about-section,
+body.dark-mode .project-section {
+    background:
+        linear-gradient(
+            135deg,
+            #172235 0%,
+            #0f172a 60%,
+            #111827 100%
+        ) !important;
+}
+
+/* Section Keahlian dan Kalkulator */
+body.dark-mode .skills-section,
+body.dark-mode .calculator-section {
+    background:
+        linear-gradient(
+            135deg,
+            #182438 0%,
+            #111c30 55%,
+            #0f172a 100%
+        ) !important;
+}
+
+/* Kartu dengan pantulan cahaya tipis */
+body.dark-mode .skill-card,
+body.dark-mode .project-card,
+body.dark-mode .calculator-card {
+    background:
+        linear-gradient(
+            145deg,
+            #202d42 0%,
+            #182438 70%
+        );
+    border-color: #35445d;
+}
+
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+    background: linear-gradient(
+        135deg,
+        #eff6ff 0%,
+        #ffffff 65%,
+        #f8fafc 100%
+    );
+}
+
+.contact-subtitle {
+    max-width: 560px;
+    margin: 0 auto;
+    color: #64748b;
+}
+
+.contact-card {
+    height: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.12);
+}
+
+.contact-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 16px 0 10px;
+}
+
+.contact-card p {
+    color: #64748b;
+}
+
+.contact-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #dbeafe;
+    color: #2563eb;
+    font-size: 1.8rem;
+}
+
+/* Dark Mode */
+body.dark-mode .contact-section {
+    background: linear-gradient(
+        135deg,
+        #182438 0%,
+        #111c30 55%,
+        #0f172a 100%
+    );
+}
+
+body.dark-mode .contact-subtitle {
+    color: #bdc9da;
+}
+
+body.dark-mode .contact-card {
+    background: linear-gradient(
+        145deg,
+        #202d42 0%,
+        #182438 70%
+    );
+    border-color: #35445d;
+}
+
+body.dark-mode .contact-card h3 {
+    color: #f1f5f9;
+}
+
+body.dark-mode .contact-card p {
+    color: #bdc9da;
+}
+
+body.dark-mode .contact-icon {
+    background: #263b5b;
+    color: #93c5fd;
+}
+
+
+/* Tampilan alamat email */
+.contact-email {
+    color: #2563eb !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+body.dark-mode .contact-email {
+    color: #93c5fd !important;
+}
